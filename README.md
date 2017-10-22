@@ -29,7 +29,4 @@ When bug is in reset mode,
     
     Left and right click to rotate selected part from above. That part will appear blue on screen.
     
-    
-    
-    
-    More information is displayed on the screen. To see more about the insect, visit http://hive.sewanee.edu/oluloep0/bugproj/buginfo.html.
+More information is displayed on the screen. To see more about the insect, visit http://hive.sewanee.edu/oluloep0/bugproj/buginfo.html.
