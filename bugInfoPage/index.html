@@ -1,0 +1,350 @@
+
+<script src="jquery-3.2.1.min.js"></script>
+<style>
+
+body{
+  background:lightblue;
+  font-size:20px;
+
+}
+
+@font-face{
+  font-family: titlefont;
+  src: url(kenyancoffeebd.ttf);
+}
+
+h1{
+  text-align:center;
+  border: 3px  dotted;
+  padding: 10px;
+  margin:20px;
+  margin-left:30%;
+  margin-right:30%;
+  
+  font-family: titlefont;
+  background:white;
+}
+
+@font-face{
+  font-family: sectionfont;
+  src: url(DK_Jambo.otf);
+}
+
+h2{
+  font-family: sectionfont;
+  text-align:center;
+}
+
+
+#photos{
+  width:100%;
+}
+
+img{
+  width:90%;
+  padding:3px;
+  border: inset 3px red;
+  margin:3px;
+  background:red;
+  
+  transition:all .5s ease-in-out;
+  -moz-transition:all .5s ease-in-out;
+  -webkit-transition:all .5s ease-in-out;
+  -o-transition:all .5s ease-in-out;
+  -ms-transition:all .5s ease-in-out;
+}
+
+img:hover{
+  transform:scale(1.1);
+  -moz-transform:scale(1.1);
+  -webkit-transform:scale(1.1);
+  -o-transform:scale(1.1);
+  -ms-transform:scale(1.1);
+  
+  background:yellow;
+}
+
+.images{
+  width:50%;
+}
+
+#original{
+  float:left;
+
+  width:40%;
+  margin:2%;
+  border:solid 3px black;  
+  padding: 10px;
+  
+  background:#C180FF;
+}
+
+#functions{
+  /*float:left;*/
+  float:right;
+  width:40%;
+  margin:1%;
+  border:solid 3px black;
+  padding: 10px;
+  
+  background:#8A0DFF;
+  
+}
+
+/*#functions::after {clear: both;}
+clear:right;
+*/
+
+#functions  ul>li{
+  color:#E6FFFF;
+  list-style-image:url(small.png);
+}
+
+#bodyparts{
+  clear:right;
+  
+  width:40%;
+  margin:2%;
+  border:solid 3px black;  
+  padding: 10px;
+  
+  background:#C180FF;
+}
+
+#new{
+  /*float:left;*/
+  float:right;
+  width:30%;
+  margin-top:0%;
+  border:solid 3px black;  
+  padding: 10px;
+  
+  background:#C5D490;
+}
+
+.control{
+  background:#0DC2FF;
+  text-align:center;
+  padding:1%;
+  border:solid 5px #5BCDD4;
+  margin-left:40%;
+  margin-right:43%;
+  
+}
+
+span{
+  color:brown;
+}
+</style>
+
+<script>
+    // EVEN SHORTER version of $('document').ready is to just use $
+  $(function() {
+
+    $(function(){ $(".original").hide ('fast') })  
+	$(function(){ $(".functions").hide ('fast') })  
+	$(function(){ $(".bodyparts").hide ('fast') })  
+	$(function(){ $(".new").hide ('fast') })  
+   
+    // MODES window
+    $("#original").on({
+        click: function(){
+            $(".original").show('fast')
+        },
+	    dblclick: function(){
+            $(".original").hide('slow')
+        }
+		});
+	
+	// FUNCTIONS window
+    $("#functions").on({
+        click: function(){
+            $(".functions").show('slow')
+        },
+	    dblclick: function(){
+            $(".functions").hide('slow')
+        } });	
+
+	// BODYPARTS window
+    $("#bodyparts").on({
+        click: function(){
+            $(".bodyparts").show('slow')
+        },
+	    dblclick: function(){
+            $(".bodyparts").hide('slow')
+        } });	
+
+	// NEW FEATURES window
+    $("#new").on({
+        click: function(){
+            $(".new").show('slow')
+        },
+	    dblclick: function(){
+            $(".new").hide('slow')
+        } });	
+		
+		
+		
+		
+    // Button opens all windows
+    $(".control").on( {        
+        click: function(){
+            $(".original").show('fast')
+        } });			
+    $(".control").on( {        
+        click: function(){
+            $(".functions").show('fast')
+        } });			
+    $(".control").on( {        
+        click: function(){
+            $(".bodyparts").show('fast')
+        } });			
+    $(".control").on( {        
+        click: function(){
+            $(".new").show('fast')
+        } });			
+		
+  });
+
+</script>
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Walking Stick Presentation</title>
+		<link rel="icon" href="http://pngimg.com/uploads/bug/bug_PNG3980.png">
+		<meta charset = "utf-8" />
+		<meta name = "viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="main.css"/>
+	</head>
+
+	<body>
+
+      <h1> RANATRA - Walking Stick Bug </h1>
+	  Click each header at the bottom to open it. Double click to close.
+
+	  
+	  <div id='photos' >
+	    
+		<div class="images" style="float:right">
+	      <img  src="OPENGLbug.png">
+		  <p>OpenGL <i>Ranatra</i></p>
+		</div>
+
+	    <div class="images" style="margin-right:5%;">
+	      <img src="realbug.jpg">
+		  <p>Real <i>Ranatra</i></p>
+		</div>
+  
+	  </div>
+	  
+	  
+	  <div class="control" style="">CLICK TO VIEW INFORMATION</div> 
+	  
+	  <div id="original">
+	    <h2>MODES</h2>
+		<div class="original">
+		<p>Press the middle mouse button to select the mode.</p>
+	    <p><b>REST/RESET Mode</b></p>
+		<div> 
+		  Here, the bug is not moving, which is its default mode when the program starts.<br>
+		  By selecting certain numbers on the numeric keypad, you can select different body 
+		  parts for rotation. <br>
+		  This mode resets everything to the default values.
+		  <ul>
+		  <li> <span>1</span> selects the entire body for rotation around the y-axis. <br>
+       		   This is the default value when mode is started. </li>
+		  <li> <span>2</span> selects the insect femurs for rotation around the z-axis. </li>
+		  <li> <span>3</span> selects the insect legs for rotation around the z-axis. </li>
+		  <li> <span>4</span> selects the insect feet for rotation around the z-axis. </li>
+		  </ul>
+		  Any part selected will have a slightly blue color while the rest of the bug remains brown, <br>
+		  and the body parts can be rotated using left and right clicks.
+		</div >
+		
+		<p><b>WALK Mode</b></p>
+		<div> 
+		  Here, the bug is moving its legs, similar to a walking motion.
+		</div >		
+		
+		<p><b>JUMP Mode</b></p>
+		<div>
+		  Here, the bug jumps a short distance into the air from its default location, <br>
+		  then teleports back and repeats the action.
+		</div>
+		
+		<p><b>SPIN Mode</b></p>
+		<div>
+		  Here, the bug rotates around the y-axis continually. The direction it rotates <br>
+		  can be changed with a left or right mouse click. It's a lot like moving in rest mode,<br> except
+		  there is no mouse action to keep it moving.<br><br>
+		</div>
+		
+		</div>
+	  </div>
+	  	  
+		  
+	  <div id="functions">
+	    <h2>FUNCTIONS</h2>
+		<div class="functions">
+		<p> These functions can be changed during ANY mode.</p>
+		<ul>
+		<li> <b>Camera Rotation Around Scene </b> <br>
+		 The camera can be rotated around the scene to view the bug from different positions.
+		  <ul><li>W and S to rotate camera above and below scene respectively.</li>
+		      <li>A and D to rotate camera to the left and right of scene respectively .</li></ul>
+		</li>
+		<li><b>Foreleg Twitch </b> <br>
+		The forelegs twitching near its head twitch continuously and can be turned on/off
+		by pressing R.
+		</li>
+		
+		<li><b>Hide Axes </b> <br>
+		  The axes are hidden by default when the program starts and they can be shown/hidden
+		  by pressing x.
+		</li>
+		
+		<li><b>Instructions  </b> <br>
+		  The scene contains text that gives a little information on each mode.
+		  More detailed instruction about each mode and overall use of the program 
+		  can be seen in the terminal window.
+		</li>
+		
+		<li><b>Program Statistics </b> <br>
+		  The scene also contains text that gives information about changing parts of 
+		  the program which include the <b> camera rotation angles </b>, 
+		  <b> body part selected for rotation </b> and <b> mode in use </b>.
+		</li>
+		</ul>
+		</div>
+	  </div>
+	  
+	 	  
+	  <div id="bodyparts">
+	    <h2>BODYPARTS</h2>
+		<div class="bodyparts">
+		<p> Body Parts of Walking Stick</p>
+		<ul><i>
+		  <li>HEAD</li>
+		  <li>EYES</li>		
+		  <li>TORSO</li>
+		  <li>FEMURS</li>
+		  <li>LEGS</li>
+		  <li>BREATHING TUBES</li></i>
+		</ul>
+		</div>
+	  </div>	  
+	  
+	  <div id="new" >
+	    <h2>NEW FEATURES</h2>
+        <div class="new">
+		<ul>
+		  <li> Change Size of Bug with g and l</li>	
+	      <li> Added sun</li>	
+		  <li>Stop cam text from rotating with camera horizontally</li>
+		</ul>
+		</div>
+	  </div>	  
+	
+   <body>
+</html>
