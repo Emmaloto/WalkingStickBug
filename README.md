@@ -4,7 +4,11 @@
 ## Introduction
 
 This is a program I built for my Computer Science Graphics Class.
-It has a walking stick bug (Ranatra) that can do various things.
+It has a walking stick bug (Ranatra) that can do various things. You can view the info page [here](https://emmaloto.github.io/apps/WalkingStickBug/bugInfoPage/).
+
+## Setup
+
+Note that the glut32.dll file is required to run this program. You can download it and place it in the same directory as the C++ scripts (or executable) to run the program.
 
 ## Instructions
 
